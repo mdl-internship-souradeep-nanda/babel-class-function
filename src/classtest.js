@@ -14,4 +14,16 @@ export default class Linky {
     this.head = newNode;
     this.count += 1;
   }
+  pop() {
+    if (this.head !== null) {
+      this.head = this.head.last;
+    }
+    this.count -= 1;
+  }
+  peek() {
+    if (this.head !== null) {
+      return this.head.payload;
+    }
+    return null;
+  }
 }

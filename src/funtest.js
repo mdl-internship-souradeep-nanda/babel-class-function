@@ -12,6 +12,18 @@ function Linky() {
   this.length = function length() {
     return this.count;
   };
+  this.pop = function pop() {
+    if (this.head !== null) {
+      this.head = this.head.last;
+    }
+    this.count -= 1;
+  };
+  this.peek = function peek() {
+    if (this.head !== null) {
+      return this.head.payload;
+    }
+    return null;
+  };
 }
 
 module.exports = Linky;
