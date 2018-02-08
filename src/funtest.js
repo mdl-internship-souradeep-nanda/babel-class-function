@@ -24,6 +24,17 @@ function Linky() {
     }
     return null;
   };
+  this.join = function join(newList) {
+    const newListCopy = newList;
+    this.count += newList.count;
+    newListCopy.count = this.count;
+    let tempNode = newList.head;
+    while (tempNode.last) {
+      tempNode = tempNode.last;
+    }
+    tempNode.last = this.head;
+    this.head = newList.head;
+  };
 }
 
 module.exports = Linky;
