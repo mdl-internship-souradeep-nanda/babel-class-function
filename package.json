@@ -4,16 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --verbose"
+  },
+  "jest": {
+    "transform": {
+      ".*": "./node_modules/babel-jest"
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-jest": "^22.2.0",
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "jest": "^22.2.1",
-    "jest-cli": "^22.2.1"
+    "jest-cli": "^22.2.1",
+    "regenerator-runtime": "^0.11.1",
+    "babel-preset-es2015": "^6.24.1"
   }
 }
